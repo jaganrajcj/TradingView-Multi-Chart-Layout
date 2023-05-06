@@ -1,1 +1,0 @@
-# TradingView-Multi-Chart-Layout
