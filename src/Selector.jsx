@@ -133,7 +133,8 @@ const Selector = ({ setSymbol, symbol }) => {
                     'aria-labelledby': 'basic-button',
                 }}
             >
-                {symbolList.map(symbol => (<MenuItem onClick={() => handleSelect(symbol.proName)} ><GetPairIcon countries={symbol.title} /> {symbol.title}</MenuItem>))}
+                {/* <GetPairIcon countries={symbol.title} /> */}
+                {symbolList.map(symbol => (<MenuItem onClick={() => handleSelect(symbol.proName)} > {symbol.title}</MenuItem>))}
 
             </Menu>
         </div>
