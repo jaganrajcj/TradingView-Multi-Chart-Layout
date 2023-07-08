@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import './App.css'
 import { AdvancedRealTimeChart } from "react-ts-tradingview-widgets";
 import Selector from './Selector';
+import ChartType from './ChartType';
 
 const symbolList = [
     {
@@ -64,6 +65,8 @@ function Chart() {
 
     const [theme, setTheme] = useState('light')
     const [symbol, setSymbol] = useState(symbolList[0].proName)
+    const [chartType, setChartType] = useState(false) // false - HTFs, true - LTFs
+
 
     const styles = {
         parent: {
@@ -82,8 +85,9 @@ function Chart() {
 
     return (
         <Box sx={{ position: 'relative', maxWidth: '99.6vw' }}>
-            <Box sx={{ position: 'absolute', top: '40px', left: '20px', zIndex: 1000 }}>
+            <Box sx={{ position: 'absolute', top: '40px', left: '20px', zIndex: 1000, display: 'flex', gap: 2, alignItems: 'center' }}>
                 <Selector setSymbol={setSymbol} symbol={symbol} />
+                <ChartType setChartType={setChartType} chartType={chartType} />
             </Box>
 
             <Grid container spacing={0.5} sx={{ m: 0, p: 0, zIndex: 0 }}>
@@ -91,7 +95,7 @@ function Chart() {
                     <AdvancedRealTimeChart theme={theme} autosize
                         copyrightStyles={styles}
                         symbol={symbol}
-                        interval={'D'}
+                        interval={chartType ? 15 : 'D'}
                         enable_publishing={false}
                         hide_top_toolbar={true}
                         hide_side_toolbar={true}
@@ -103,7 +107,7 @@ function Chart() {
                     <AdvancedRealTimeChart theme={theme} autosize
                         copyrightStyles={styles}
                         symbol={symbol}
-                        interval={240}
+                        interval={chartType ? 5 : 240}
                         enable_publishing={false}
                         hide_top_toolbar={true}
                         hide_side_toolbar={true}
@@ -115,7 +119,7 @@ function Chart() {
                     <AdvancedRealTimeChart theme={theme} autosize
                         copyrightStyles={styles}
                         symbol={symbol}
-                        interval={60}
+                        interval={chartType ? 3 : 60}
                         enable_publishing={false}
                         hide_top_toolbar={true}
                         hide_side_toolbar={true}
@@ -127,7 +131,7 @@ function Chart() {
                     <AdvancedRealTimeChart theme={theme} autosize
                         copyrightStyles={styles}
                         symbol={symbol}
-                        interval={15}
+                        interval={chartType ? 1 : 15}
                         enable_publishing={false}
                         hide_top_toolbar={true}
                         hide_side_toolbar={true}

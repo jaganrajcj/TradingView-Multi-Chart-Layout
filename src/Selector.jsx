@@ -12,6 +12,18 @@ const symbolList = [
         "title": "USDJPY"
     },
     {
+        "proName": "FOREXCOM:USDCHF",
+        "title": "USDCHF"
+    },
+    {
+        "proName": "FOREXCOM:EURJPY",
+        "title": "EURJPY"
+    },
+    {
+        "proName": "OANDA:US30USD",
+        "title": "US30"
+    },
+    {
         "proName": "FOREXCOM:USDCAD",
         "title": "USDCAD"
     },
@@ -23,11 +35,6 @@ const symbolList = [
         "proName": "FOREXCOM:GBPUSD",
         "title": "GBPUSD"
     },
-    {
-        "proName": "FOREXCOM:USDCHF",
-        "title": "USDCHF"
-    },
-
     {
         "proName": "FOREXCOM:AUDUSD",
         "title": "AUDUSD"
