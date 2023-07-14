@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import './App.css'
@@ -67,6 +67,10 @@ function App() {
 
   const [theme, setTheme] = useState('light')
   const [symbol, setSymbol] = useState(symbolList[0].proName)
+
+  useEffect(() => {
+    document.title = `TVMC - ${symbolList[0].proName.split(':')[1]}`
+  }, [])
 
   const styles = {
     parent: {

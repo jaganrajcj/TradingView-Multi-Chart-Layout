@@ -83,6 +83,8 @@ const Selector = ({ setSymbol, symbol }) => {
     const handleSelect = (proName) => {
         handleClose()
         setSymbol(proName)
+        document.title = `TVMC - ${proName.split(':')[1]}`
+
     }
 
     const GetPairIcon = ({ countries }) => {
