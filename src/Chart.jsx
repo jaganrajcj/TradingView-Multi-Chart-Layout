@@ -103,7 +103,7 @@ function Chart() {
 
             {
                 layout == 1 ?
-                    <Grid container spacing={0.5} sx={{ m: 0, p: 0, zIndex: 0 }}>
+                    <Grid container spacing={0.0} sx={{ m: 0, p: 0, zIndex: 0 }}>
                         <Grid item xs={6} sx={{ height: '50vh' }}>
                             <AdvancedRealTimeChart theme={theme} autosize
                                 copyrightStyles={styles}
@@ -151,7 +151,7 @@ function Chart() {
                             ></AdvancedRealTimeChart>
                         </Grid>
                     </Grid>
-                    : <Grid container spacing={0.5} sx={{ m: 0, p: 0, zIndex: 0 }}>
+                    : <Grid container spacing={0.0} sx={{ m: 0, p: 0, zIndex: 0 }}>
                         <Grid item xs={4} sx={{ height: '50vh' }}>
                             <AdvancedRealTimeChart theme={theme} autosize
                                 copyrightStyles={styles}
@@ -222,7 +222,7 @@ function Chart() {
                         </Grid>
                     </Grid>
             }
-        </Box>
+        </Box >
 
     )
 }
