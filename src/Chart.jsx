@@ -12,12 +12,12 @@ const symbolList = [
         "title": "EURUSD"
     },
     {
-        "proName": "FOREXCOM:GBPUSD",
-        "title": "GBPUSD"
-    },
-    {
         "proName": "FOREXCOM:USDJPY",
         "title": "USDJPY"
+    },
+    {
+        "proName": "FOREXCOM:GBPUSD",
+        "title": "GBPUSD"
     },
     {
         "proName": "FOREXCOM:USDCHF",
@@ -59,6 +59,10 @@ const symbolList = [
         "proName": "FOREXCOM:GBPCAD",
         "title": "GBPCAD"
     },
+    {
+        "proName": "FOREXCOM:XAUUSD",
+        "title": "XAUUSD"
+    },
 ]
 
 function Chart() {
@@ -66,7 +70,7 @@ function Chart() {
     const [theme, setTheme] = useState('light')
     const [symbol, setSymbol] = useState(symbolList[0].proName)
     const [chartType, setChartType] = useState(false) // false - HTFs, true - LTFs
-    const [layout, setLayout] = useState(0) // 0 - 6 chart, 1 - 4 chart
+    const [layout, setLayout] = useState(1) // 0 - 6 chart, 1 - 4 chart
 
 
     const styles = {
