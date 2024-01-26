@@ -1,21 +1,21 @@
 import React, { useState } from 'react'
 import Switch from '@mui/material/Switch';
 
-const ChartType = ({ setChartType, chartType }) => {
+const ChartType = ({ setTheme, theme }) => {
 
     const handleChange = (event) => {
-        setChartType(!chartType);
+        setTheme((prev) => prev === 'light'? 'dark': 'light');
     };
 
     return (
-        <div className='flex justify-center items-center border px-1 rounded-lg'>
-            <div>HTFs</div>
+        <div className={`${theme="dark"? 'text-white': null} flex justify-center items-center px-1 rounded-lg`}>
+            <div>Dark</div>
             <Switch
-                checked={chartType}
+                checked={theme==='dark'? true: false}
                 onChange={handleChange}
                 inputProps={{ 'aria-label': 'controlled' }}
             />
-            <div>LTFs</div>
+            <div>Light</div>
 
         </div>
     )
